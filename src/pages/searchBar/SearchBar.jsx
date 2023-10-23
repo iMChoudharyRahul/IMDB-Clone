@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./SearchBarStyle.css";
-import MovieList from "../../components/movieList/MovieList";
 
 const SearchBar = ({ onSearch }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
