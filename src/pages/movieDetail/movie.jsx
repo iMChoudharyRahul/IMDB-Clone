@@ -7,17 +7,15 @@ const Movie = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    getData();
+    (()=> {
+      fetch(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
+      )
+        .then((res) => res.json())
+        .then((data) => setMovie(data));
+    })()
     window.scrollTo(0, 0);
-  }, []);
-
-  const getData = () => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
-    )
-      .then((res) => res.json())
-      .then((data) => setMovie(data));
-  };
+  }, [id, setMovie]);
 
   return (
     <div className="movie">
@@ -27,6 +25,7 @@ const Movie = () => {
           src={`https://image.tmdb.org/t/p/original${
             currentMovieDetail ? currentMovieDetail.backdrop_path : ""
           }`}
+          alt="movie-img"
         />
       </div>
       <div className="movie__detail">
@@ -37,6 +36,7 @@ const Movie = () => {
               src={`https://image.tmdb.org/t/p/original${
                 currentMovieDetail ? currentMovieDetail.poster_path : ""
               }`}
+              alt="movie poster img"
             />
           </div>
         </div>
@@ -90,6 +90,7 @@ const Movie = () => {
             href={currentMovieDetail.homepage}
             target="_blank"
             style={{ textDecoration: "none" }}
+            rel="noreferrer"
           >
             <p>
               <span className="movie__homeButton movie__Button">
@@ -103,6 +104,7 @@ const Movie = () => {
             href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id}
             target="_blank"
             style={{ textDecoration: "none" }}
+            rel="noreferrer"
           >
             <p>
               <span className="movie__imdbButton movie__Button">
@@ -125,6 +127,7 @@ const Movie = () => {
                     src={
                       "https://image.tmdb.org/t/p/original" + company.logo_path
                     }
+                    alt="company-logo"
                   />
                   <span>{company.name}</span>
                 </span>

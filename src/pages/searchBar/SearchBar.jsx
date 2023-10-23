@@ -11,8 +11,7 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearchSubmit = () => {
     // Perform your search or submit action here
-    console.log("Searching for:", searchText);
-    if (searchText.trim() != "") {
+    if (searchText.trim() !== "") {
       let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US&query=${searchText}`;
       console.log("Check Url EndPoint", searchUrl);
       onSearch(searchUrl);
