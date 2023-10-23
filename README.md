@@ -69,44 +69,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
- <!-- ============> Module-01 Navigation Bar and Crousal==========>  -->
- [] Imbd Logo 
- [] multiple page 
-    [] Popular
-    [] Top Rated
-    [] Upcoming
-    [] Search Bar
-    [] WatchList
-[] Crousal Multiple Movies 
-[] Rating And Review Of Particular movie
-
-<!-- ======== Module-02 Movie Section ========> -->
-  [] Add Multiple movies in Popular Movies section
-  [] add rating and Review 
-  [] Add multiple pagination
-  [] Add One Row Only 5 Movies 
-  [] Add Different Page Route 
-  [] Working With TopRated page
-  [] working With Upcomming Page
-  [] Add All Page IN Router 
-
-  <!-- ======> Module-03 =====>  -->
-  [] when Click on Any movie Route TO movie Details Page
-  [] Here We Add Deatils of Particular movie 
-  [] and Add Three Button 
-  [] button First Back Button
-  [] second Button redirect Actual Movie website
-  [] Third Button for Send To imdb Website
-  [] Movie Production Companey Details 
-
-
-  <!-- =========> Module 04 ========>  -->
-  []  Implement Search Bar we so particular movie According to search 
-  [] Implement Whislist Section We add Movies on Whislist Section
-  [] After add movie on whislist we show all fev Movies
-  [] and Add a Delete button to remove the movie 
-  [] add Back Button to come Home Page 
-  [] Add Pagination On Home Page 
-  [] we add Multiple Page pagination
  
